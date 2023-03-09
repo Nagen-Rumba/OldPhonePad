@@ -42,7 +42,8 @@ Mapping The NumberToLetterMap dictionary contains a mapping of numbers to letter
 {"#", "" }
 
 
-Special Characters The checkSequence function also supports the following special characters:
+**Special Characters** 
+The checkSequence function also supports the following special characters:
 
 *: Deletes the last character from the output string. #: Ends the input sequence and returns the final output string. : Adds a space to the output string.
 
