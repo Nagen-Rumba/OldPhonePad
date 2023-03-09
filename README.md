@@ -38,8 +38,14 @@ Dictionary Mapping The NumberToLetterMap dictionary contains a mapping of number
 {"0", " " },
 {"*", "*" },
 {"#", "" }
+
+
 Special Characters The checkSequence function also supports the following special characters:
 
 *: Deletes the last character from the output string. #: Ends the input sequence and returns the final output string. : Adds a space to the output string.
+
+**If any input starts with *#, the program does not print anything as the key used for the delete**
+
+**If any input starts with 999999 or 22222 it reverts back to the starting character. For example, 9999 would be "Z" but 99999 would revert back to "W" and then continue to the next letters. **
 
 License This program is licensed under the MIT License. See the LICENSE file for details.
