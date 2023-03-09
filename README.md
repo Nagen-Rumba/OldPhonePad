@@ -1,10 +1,12 @@
 # OldPhonePad
-Iron Software C# Coding Challenge
+**Iron Software C# Coding Challenge**
 This program is designed to convert a sequence of numbers into a string of letters using a mapping provided in a dictionary. It also supports special characters such as * for delete, # for end of input, and for a space.
 
-Usage The checkSequence function takes a string of numbers as input and returns the corresponding string of letters. The Main function contains several test cases demonstrating how to use the checkSequence function.
+**Usage** 
+The checkSequence function takes a string of numbers as input and returns the corresponding string of letters. The Main function contains several test cases demonstrating how to use the checkSequence function.
 
-Dictionary Mapping The NumberToLetterMap dictionary contains a mapping of numbers to letters based on the T9 predictive text input method. For example, the number "2" maps to the letters "A", "B", and "C". The mapping is as follows:
+**Dictionary** 
+Mapping The NumberToLetterMap dictionary contains a mapping of numbers to letters based on the T9 predictive text input method. For example, the number "2" maps to the letters "A", "B", and "C". The mapping is as follows:
 
 {"1", "&"},
 {"11", "'"},
