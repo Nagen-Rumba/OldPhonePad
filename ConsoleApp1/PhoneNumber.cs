@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+﻿using System.Runtime.InteropServices;
+
+>>>>>>> 0a63710de8bef26935e07d14e1ec6ba0bcead9b9
 public class PhoneNumber
 {
 
@@ -48,6 +53,7 @@ public class PhoneNumber
         string result = "";
         int i = 0;
 
+<<<<<<< HEAD
 
         while (input.Count() > 1 && i < input.Count())
         {
@@ -78,13 +84,47 @@ public class PhoneNumber
                 {
                     //Any invalid characters are ignored
                     result += NumberToLetterMap.ContainsKey(outputText) ? NumberToLetterMap[outputText.Trim()] : "";
+=======
+        while (input.Count() > 2 && i < input.Count())
+        {
+            for (int j = i; j < input.Count(); j++)
+            {
+
+
+                // Check for previous value with current value-------------------
+                if (input[i] == input[j])
+                {
+                    outputText += input[i];
+                }
+                //Append to result if the characters change and set the loop 
+                else
+                {
+                    
+                    if (outputText.Count() > 3 && !outputText.Contains("9") || !outputText.Contains("7"))
+                    {
+                        result += NumberToLetterMap[outputText[0].ToString()];
+                    }
+                    else if (outputText.Count() > 4 && outputText.Contains("9") || outputText.Contains("7"))
+                    {
+                        result += NumberToLetterMap[outputText[0].ToString()];
+                    }
+                    else
+                    {
+                        result += NumberToLetterMap[outputText.ToString()];
+                    }
+
+>>>>>>> 0a63710de8bef26935e07d14e1ec6ba0bcead9b9
                     i = j;
                     j--;
                     outputText = "";
                 }
 
                 //CHECKS FOR *, " ", # symbols which perform delete, 1 sec wait, send respectively -------------------
+<<<<<<< HEAD
                 if (input[j] == '*' && result.Count() > 0)
+=======
+                if (input[j] == '*')
+>>>>>>> 0a63710de8bef26935e07d14e1ec6ba0bcead9b9
                 {
                     result = result.Remove(result.Length - 1);
                 }
@@ -95,7 +135,25 @@ public class PhoneNumber
                 }
                 if (input[j] == '#')
                 {
+<<<<<<< HEAD
                     return result;
+=======
+                    if(outputText.Count() > 3 && !outputText.Contains("9") && !outputText.Contains("7"))
+                    {
+                        result += NumberToLetterMap[outputText[0].ToString()];
+                    }
+                    else if(outputText.Count() > 4 && outputText.Contains("9") && outputText.Contains("7"))
+                    {
+                        result += NumberToLetterMap[outputText[0].ToString()];
+                    }
+                    else
+                    {
+                        result += NumberToLetterMap[outputText.ToString()];
+                    }
+                    
+                    i = input.Count() + 1;
+                    break;
+>>>>>>> 0a63710de8bef26935e07d14e1ec6ba0bcead9b9
                 }
                 //End of check -------------------
             }
@@ -104,4 +162,15 @@ public class PhoneNumber
 
         return result;
     }
+<<<<<<< HEAD
+=======
+
+   
+
+    public static void Main(string[] args)
+    {
+        //Test Cases
+        Console.WriteLine(checkSequence("2222#")); 
+    }
+>>>>>>> 0a63710de8bef26935e07d14e1ec6ba0bcead9b9
 }
