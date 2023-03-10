@@ -67,7 +67,7 @@ public class PhoneNumber
                         outputText += input[i];
                     }
 
-                    // If the above checks fail then we reset the letter to the initial character
+                    // If the above checks fail then we reset the letter to the initial character.
                     else
                     {
                         outputText = input[i].ToString();
